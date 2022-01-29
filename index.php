@@ -13,7 +13,7 @@
 	<title>Обробка форм</title>
 </head>
 <body>
- 	<form name="test" action="" method="post">
+ 	<form name="test" action="array/array_some.php" method="post">
 		<label>Ім'я: </label><br />
 		<input type="text" name="name" placeholder="Ім'я" /><br />
 
