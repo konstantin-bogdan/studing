@@ -1,10 +1,15 @@
 <?php
+
     if(isset($_POST["done"])) {
+
+        var_dump($_POST);
 
 	    if ($_POST["name"] == "")
 		    echo "Додайте ім'я. <a href='/'>Виправити</a>"; // якщо не введене ім'я перенаправляє на корегування ім'я
 	    else
 		    header("Location:index.php"); //  якщо ім'я записано а немає інших данних перенаправляє на почасткову сторіну index.php
+
+
     }
 ?>
 <!DOCTYPE html>
@@ -13,7 +18,7 @@
 	<title>Обробка форм</title>
 </head>
 <body>
- 	<form name="test" action="array/array_some.php" method="post">
+ 	<form name="test" action="" method="post">
 		<label>Ім'я: </label><br />
 		<input type="text" name="name" placeholder="Ім'я" /><br />
 
