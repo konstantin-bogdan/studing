@@ -9,6 +9,7 @@
 
 	// ВИЧИТУВАННЯ ФАЙЛУ
 
+
 	$file = fopen ("a.txt", "r+");
 	while (!feof($file)){
 		echo fread ($file, 1) . "<br />"; // вивод по кількості символів
