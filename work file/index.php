@@ -17,6 +17,7 @@
 
 		fseek ($file, 0);  // свати курсор на початок
 
+
 		echo fread ($file, 1);
 	fclose ($file);
 	echo " ---------------------------<br />";
