@@ -4,11 +4,14 @@
 
         var_dump($_POST);
 
-	    if ($_POST["name"] == "")
-		    echo "Додайте ім'я. <a href='/'>Виправити</a>"; // якщо не введене ім'я перенаправляє на корегування ім'я
-	    else
-		    header("Location:index.php"); //  якщо ім'я записано а немає інших данних перенаправляє на почасткову сторіну index.php
+	    if ($_POST["name"] == "") {
 
+		    echo 'Додайте ім\'я. <a href="index.php">Виправити</a>'; // якщо не введене ім'я перенаправляє на корегування ім'я
+
+	    } else {
+
+		    header("Location:index.php"); //  якщо ім'я записано а немає інших данних перенаправляє на почасткову сторіну index.php
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -22,7 +25,7 @@
 		<input type="text" name="name" placeholder="Ім'я" /><br />
 
 		<label>Email </label><br />
-		<input type="text" name="emeil" placeholder="Emeil" /><br />
+		<input type="text" name="email" placeholder="Email" /><br />
 
 		<label>Повідомлення: </label><br />
 		<textarea name="message" cols="40" rows="10"></textarea>
