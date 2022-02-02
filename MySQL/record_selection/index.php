@@ -25,11 +25,24 @@
 	$result_set = $mysqli->query ("SELECT `id`, `login` FROM `users`"); // виведеться id , login
 	printResult ($result_set);
 
-	$result_set = $mysqli->query ("SELECT `id`, `login` FROM `users` WHERE  `id` > 7"); // виведеться id > 7
+	$result_set = $mysqli->query ("SELECT * FROM `users` WHERE  `id` < 7 ORDER BY `id` ASC"); // виведеться id < 7 сортування по зростанню
 	printResult ($result_set);
 
+	$result_set = $mysqli->query ("SELECT * FROM `users` WHERE  `id` < 7 ORDER BY `id` DESC "); // виведеться id < 7 сортування по спаданню
+	printResult ($result_set);
+
+	$result_set = $mysqli->query ("SELECT * FROM `users` WHERE  `id` < 7 ORDER BY `login` DESC LIMIT 0, 2");
+	printResult ($result_set);
+
+	$result_set = $mysqli->query ("SELECT * FROM `users` WHERE  `login` LIKE '%ser%'"); // виведуться тыльки з вмыстом "ser"
+	printResult ($result_set);
+
+	$result_set = $mysqli->query ("SELECT COUNT(`id`) FROM `users` "); // виве
+ 	printResult ($result_set);
+
+
 	var_dump ($mysqli);
-	$mysqli->close();
+	$mysqli->close ();
 
 
 
